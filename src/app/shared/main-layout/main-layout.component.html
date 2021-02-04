@@ -1,0 +1,22 @@
+<nav class="navbar bg-dark">
+    <h2>Online Shop Kristina</h2>
+
+    <ul>
+        <li routerLinkActive="active">
+            <a href="#">Куртки</a>
+        </li>
+        <li routerLinkActive="active">
+            <a href="#">Блузки</a>
+        </li>
+        <li routerLinkActive="active">
+            <a href="#">Брюки</a>
+        </li>
+        <li routerLinkActive="active">
+            <a href="#">Юбки</a>
+        </li>
+        <li routerLinkActive="active">
+            <a [routerLink]="['/cart']" >Корзина</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
