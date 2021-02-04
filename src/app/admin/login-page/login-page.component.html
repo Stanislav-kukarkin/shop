@@ -1,4 +1,4 @@
-<div>
+
     <form [formGroup]='form'(ngSubmit)='submit()'>
 
 
@@ -9,7 +9,7 @@
             <input id="email" type="email" formControlName="email">
             <div *ngIf="form.get('email').touched && form.get('email').invalid" class="validation">
                 <small *ngIf="form.get('email').errors.required">Enter email</small>
-                <small *ngIf="form.get('email').errors.email">Enter valid email</small>
+                <small *ngIf="form.get('email').errors.email">Enter Valid email</small>
             </div>
         </div>
 
@@ -19,7 +19,7 @@
             <div *ngIf="form.get('password').touched && form.get('password').invalid" class="validation">
                 <small *ngIf="form.get('password').errors.required">Enter Password</small>
                 <small *ngIf="form.get('password').errors.minlength">
-                    password must be at least ({form.get('password').errors.minLength.requiredLength}) characters. 
+                    password must be at least ({form.get('password').errors.minLength.requiredLength}) characters.
                     Now he ({form.get('password').errors.minLength.actualLength})</small>
             </div>
         </div>
@@ -27,4 +27,3 @@
         <button type="submit" class="btn btn-primary btn-block" [disabled]="form.inalid || submitted">Войти</button>
 
     </form>
-</div>
