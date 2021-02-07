@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './shared/admin-layout/admin-layout.component';
@@ -12,26 +12,26 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
-        AdminLayoutComponent,
-        LoginPageComponent,
-        DashboardPageComponent,
-        EditPageComponent,
-        OrdersPageComponent,
-        AddPageComponent,
+        AdminLayoutComponent ,
+        LoginPageComponent ,
+        DashboardPageComponent ,
+        EditPageComponent ,
+        OrdersPageComponent ,
+        AddPageComponent ,
     ],
-    imports:[
+    imports : [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forChild([
             {
-            path:'', component: AdminLayoutComponent, children: [
-                {path:'' , redirectTo:'/admin/login' , pathMatch: 'full'},
-                {path:'login', component: LoginPageComponent },
-                {path:'dashboard', component: DashboardPageComponent},
-                {path:'product/:id/edit', component: EditPageComponent },
-                {path:'orders', component: OrdersPageComponent},
-                {path:'add', component: AddPageComponent },
+            path : '', component : AdminLayoutComponent , children : [
+                {path : '' , redirectTo : '/admin/login' , pathMatch : 'full'} ,
+                {path : 'login' , component : LoginPageComponent } ,
+                {path : 'dashboard' , component : DashboardPageComponent} ,
+                {path : 'product/:id/edit' , component: EditPageComponent } ,
+                {path : 'orders', component : OrdersPageComponent} ,
+                {path : 'add', component : AddPageComponent } ,
             ]
             }
         ])
@@ -39,4 +39,5 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     exports: [RouterModule]
 })
 
-export class AdminModule{ }
+export class AdminModule{
+}
