@@ -9,8 +9,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
   form: FormGroup
+  submitted: true
 
   constructor() { }
+
+  onSubmit(): void {
+    console.warn('HELLO WORLD!!');
+  }
 
   ngOnInit(): void {
     this.form = new FormGroup({
