@@ -1,4 +1,4 @@
-<form [formGroup]='form'(ngSubmit)='onSubmit()'>
+<form [formGroup]='form'(ngSubmit)='Submit()'>
         
     <h2>Login as administrator</h2>
 
@@ -22,6 +22,6 @@
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Ввод</button>
+    <button type="Submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Ввод</button>
 
 </form>
