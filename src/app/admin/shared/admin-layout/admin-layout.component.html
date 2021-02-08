@@ -3,7 +3,7 @@
     </h1>
 
 
-    <ul>
+    <ul *ngIf="auth.isAuthenticated(); else logIn">
         <li routerLinkActive="active">
          <a [routerLink]="['/admin','dashboard']">Dashboard</a>
         </li>
@@ -16,10 +16,18 @@
         <li routerLinkActive="active">
             <a href="#" (click)="logOut($event)">logOut</a>
         </li>
-        <li routerLinkActive="active">
-            <a [routerLink]="['/admin','logIn']">LogIn</a>
-        </li>
     </ul>
+
+    <ng-template #logIn>
+        <ul>
+            <li routerLinkActive="active">
+                <a [routerLink]="['/admin','logIn']">LogIn</a>
+            </li>
+        </ul>
+    </ng-template>
+
+
+
 </nav>
 
 <div class="container">
