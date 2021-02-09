@@ -8,6 +8,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { AdminModule } from './admin/admin.module'
 import {HttpClientModule} from '@angular/common/http'
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     AdminModule,
+    QuillModule.forRoot(),
     HttpClientModule,
   ],
   providers: [],
