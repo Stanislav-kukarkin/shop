@@ -23,12 +23,12 @@
     </div>
     <div class="form-control">
         <label for="type">Photo</label>
-        <quill-editor formControlName="Photo"></quill-editor>
+        <quill-editor formControlName="photo"></quill-editor>
 
     </div>
     <div class="form-control">
         <label for="type">Information</label>
-        <quill-editor formControlName="Information"></quill-editor>
+        <quill-editor formControlName="info"></quill-editor>
 
     </div>
     <div class="form-control">
@@ -39,6 +39,6 @@
         </div>
     </div>
 
-    <button type="Submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Ввод</button>
+    <button type="Submit" class="btn btn-primary btn-block" [disabled]="submitted">Добавить</button>
 
 </form>
