@@ -10,6 +10,7 @@ import { AdminModule } from './admin/admin.module'
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { QuillModule } from 'ngx-quill';
 import { AuthInterceptor } from './shared/auth.intercepter';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AuthInterceptor } from './shared/auth.intercepter';
     MainLayoutComponent,
     MainPageComponent,
     ProductPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
