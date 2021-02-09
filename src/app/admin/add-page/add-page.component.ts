@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ProductService } from 'src/app/shared/product.service';
 
 @Component({
@@ -8,13 +9,13 @@ import { ProductService } from 'src/app/shared/product.service';
   styleUrls: ['./add-page.component.scss']
 })
 export class AddPageComponent implements OnInit {
-  submitted = false
-  
 
   form: FormGroup
+  submitted = false
 
   constructor(
-    private productServ: ProductService
+    private productService: ProductService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -41,7 +42,11 @@ export class AddPageComponent implements OnInit {
       date: new Date()
     }
     console.log(this.form)
-    this.productServ.create(product).subscribe( res => console.log(res))
+    this.productService.create(product).subscribe( res => {
+      this.form.reset()
+      this.submitted = false
+      this.router.navigate(['./'])
+    })
   }
 
 }
