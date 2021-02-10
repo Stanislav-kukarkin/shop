@@ -5,16 +5,16 @@
 
     <ul *ngIf="auth.isAuthenticated(); else logIn">
         <li routerLinkActive="active">
-         <a [routerLink]="['/admin','dashboard']">Dashboard</a>
+         <a [routerLink]="['/admin','dashboard']">Редактировать</a>
         </li>
         <li routerLinkActive="active">
-         <a [routerLink]="['/admin','add']">Add Product</a>
+         <a [routerLink]="['/admin','add']">Добавить товар</a>
         </li>
         <li routerLinkActive="active">
-         <a [routerLink]="['/admin','orders']">Orders</a>
+         <a [routerLink]="['/admin','orders']">Заказы</a>
         </li>
         <li routerLinkActive="active">
-            <a href="#" (click)="logOut($event)">logOut</a>
+            <a href="#" (click)="logOut($event)">Выйти</a>
         </li>
     </ul>
 
