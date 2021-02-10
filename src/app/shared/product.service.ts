@@ -11,6 +11,7 @@ import { FbResponse, Product } from './interfaces';
 export class ProductService {
 
   type = 'Куртки'
+  cartProducts : Product[] = [ ]
 
   constructor(private http : HttpClient) { }
 
@@ -57,6 +58,10 @@ export class ProductService {
 
   setType (type){
     this.type = type
+  }
+
+  addProduct(product){
+    this.cartProducts.push(product)
   }
 
 }
