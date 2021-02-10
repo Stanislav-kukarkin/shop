@@ -1,5 +1,5 @@
 <div *ngIf="products.length; else loading">
-    <h2 class="text-center">Страница редактирования товара</h2>
+    <h2 class="text-center">Редактирования товара</h2>
 
     <table>
         <thead>
@@ -19,7 +19,7 @@
                 <td>{{ product.title }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.date }}</td>
-                <td><button class="btn btn-dark" [routerLink]="['/admin','product','product.id','edit']"> Открыть</button></td>
+                <td><button class="btn btn-dark" [routerLink]="['/admin','product',product.id,'edit']"> Открыть</button></td>
                 <td><button class="btn btn-danger" (click)="remove(product.id)">Удалить</button></td>
             </tr>
         </tbody>
