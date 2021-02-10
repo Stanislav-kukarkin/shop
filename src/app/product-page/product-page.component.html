@@ -24,7 +24,7 @@
                     <div class="margin10">
                         <h2>Цена: {{product.price}} rub</h2>
     
-                        <button class="btn " [routerLink]="['./cart']" >Добавить в корзину</button>
+                        <button class="btn " [routerLink]="['/cart']" (click)="addProduct(product)">Добавить в корзину</button>
                     </div>
                 </div>
 
