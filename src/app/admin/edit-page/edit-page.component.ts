@@ -56,9 +56,8 @@ export class EditPageComponent implements OnInit {
       price: this.form.value.price,
       date: new Date()
     }).subscribe( res => {
-      this.form.reset()
       this.submitted = false
-      this.router.navigate(['./'])
+      this.router.navigate(['/admin','dashboard'])
     })
   }
 
