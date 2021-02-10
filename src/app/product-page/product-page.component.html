@@ -1,7 +1,7 @@
 <div *ngIf="product$ | async as product; else loading ">
     <div class="product">
         <div class="header right">
-            <button routerLink="/" class="btn btn-dark">Назад</button>
+            <button routerLink="/" class="btn">Назад</button>
         </div>
 
         <div class="flex">
@@ -12,11 +12,7 @@
                     <quill-view-html [content]="product.photo"></quill-view-html>
                 </div>
 
-                <div>
-                    <h2>Цена: {{product.price}} rub</h2>
 
-                    <button class="btn btn-dark" [routerLink]="['./cart']" >Добавить в корзину</button>
-                </div>
             </div>
 
             <div class="item">
@@ -24,6 +20,12 @@
 
                 <div>
                     <quill-view-html [content]="product.info"></quill-view-html>
+
+                    <div class="margin10">
+                        <h2>Цена: {{product.price}} rub</h2>
+    
+                        <button class="btn " [routerLink]="['./cart']" >Добавить в корзину</button>
+                    </div>
                 </div>
 
 

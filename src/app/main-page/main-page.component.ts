@@ -8,11 +8,8 @@ import { ProductService } from '../shared/product.service';
 })
 export class MainPageComponent implements OnInit {
 
- 
-
   products$
-
-  
+  type
 
   constructor(
     private productService: ProductService
