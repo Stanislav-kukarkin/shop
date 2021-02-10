@@ -3,19 +3,19 @@
 
     <ul>
         <li routerLinkActive="active">
-            <a href="#">Куртки</a>
+            <a (click)="setType('Куртки')">Куртки</a>
         </li>
         <li routerLinkActive="active">
-            <a href="#">Блузки</a>
+            <a (click)="setType('Кофты')">Кофты</a>
         </li>
         <li routerLinkActive="active">
-            <a href="#">Брюки</a>
+            <a (click)="setType('Комбинезон')">Комбинезоны</a>
         </li>
         <li routerLinkActive="active">
-            <a href="#">Юбки</a>
+            <a (click)="setType('Юбки')">Юбки</a>
         </li>
         <li routerLinkActive="active">
-            <a [routerLink]="['/cart']" >Корзина</a>
+            <a (click)="setType('Корзина')" [routerLink]="['/cart']" >Корзина</a>
         </li>
     </ul>
 </nav>
