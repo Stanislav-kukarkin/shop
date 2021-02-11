@@ -14,6 +14,7 @@ export class CartPageComponent implements OnInit {
 
   cartProducts = []
   totalPrice = 0
+  added = ''
 
   form :FormGroup;
   submitted = false
@@ -55,6 +56,7 @@ export class CartPageComponent implements OnInit {
     console.log(this.form)
     this.orderService.create(order).subscribe( res => {
       this.form.reset()
+      this.added = "Заказ Совершён"
       this.submitted = false
 
     })
