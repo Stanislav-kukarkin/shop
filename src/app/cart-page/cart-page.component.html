@@ -1,5 +1,5 @@
 <div class="container" *ngIf="cartProducts.length > 0; else empty">
-    <h2 class="text-center">Ваш заказ:</h2>
+    <h1 class="text-center">Ваш заказ:</h1>
 
     <table> 
         <tbody>
@@ -7,7 +7,7 @@
                 <td>{{cartProduct.type}}</td>
                 <td>{{cartProduct.title}}</td>
                 <td>
-                    <button class="btn btn-danger">Удалить</button>
+                    <button class="btn btn-danger" (click)="delete(cartProducts)">Удалить</button>
                 </td>
                 <td>{{cartProduct.price}} rub</td>
             </tr>
@@ -15,6 +15,45 @@
     </table>
     <hr>
     <b class="right">Итог: {{totalPrice}} rub</b>
+
+    <h2 class="text-center">Доставка:</h2>
+
+    <form [formGroup]='form'(ngSubmit)='Submit()'>
+
+    <div class="form-control">
+        <label for="name">Ваше Имя</label>
+        <input id="name" type="name" formControlName="name">
+        <div *ngIf="form.get('name').touched && form.get('name').invalid" class="validation">
+            <small *ngIf="form.get('name').errors.required">Введите Ваше Имя</small>
+        </div>
+    </div>
+    <div class="form-control">
+        <label for="phone">Номер телефона</label>
+        <input id="phone" type="phone" formControlName="phone">
+        <div *ngIf="form.get('phone').touched && form.get('phone').invalid" class="validation">
+            <small *ngIf="form.get('phone').errors.required">Введите Ваш Номер Телефона</small>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <label for="address">Адрес доставки</label>
+        <input id="address" type="adress" formControlName="address">
+        <div *ngIf="form.get('address').touched && form.get('address').invalid" class="validation">
+            <small *ngIf="form.get('address').errors.required">Укажите Ваш Адрес</small>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <label for="payment">Способ оплаты</label>
+        <select formControlName="payment" >
+            <option value="cash">Наличные</option>
+            <option value="card">Банковской картой</option>
+        </select>
+    </div>
+
+    <button type="Submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Добавить</button>
+
+</form>
 </div>
 
 <ng-template #empty>
