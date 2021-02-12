@@ -1,7 +1,7 @@
 <div class="text-center">
     <h2>{{product.title}}</h2>
 
-    <div class="flex-center">
+    <div class="flex-center ">
         <quill-view-html [content]="product.photo"></quill-view-html>
     </div>
 
@@ -13,3 +13,5 @@
 
     <button [routerLink]="['./cart']" class="btn btn-dark" (click)="addProduct(product)">Добавить в корзину</button>
 </div>
+
+
