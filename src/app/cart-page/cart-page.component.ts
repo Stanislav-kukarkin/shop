@@ -53,7 +53,7 @@ export class CartPageComponent implements OnInit {
       price: this.totalPrice,
       date: new Date()
     }
-    console.log(this.form)
+    
     this.orderService.create(order).subscribe( res => {
       this.form.reset()
       this.added = "Заказ Совершён"
@@ -63,9 +63,13 @@ export class CartPageComponent implements OnInit {
   }
 
   delete(product): void{
-    this.totalPrice -= +product.price
     this.cartProducts.splice(this.cartProducts.indexOf(product), 1)
+    this.totalPrice = 0;
+    for (let i = 0; i < product.length; i++) {
+      this.totalPrice += parseInt(product[i].price)
+    }
   }
+
 
 }
 
