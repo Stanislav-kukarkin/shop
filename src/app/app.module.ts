@@ -13,6 +13,8 @@ import { AuthInterceptor } from './shared/auth.intercepter';
 import { ProductComponent } from './product/product.component';
 import { SortingPipe } from './shared/sorting.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdminModule,
     QuillModule.forRoot(),
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     {

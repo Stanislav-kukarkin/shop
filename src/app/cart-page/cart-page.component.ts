@@ -53,7 +53,7 @@ export class CartPageComponent implements OnInit {
       price: this.totalPrice,
       date: new Date()
     }
-    console.log(this.form)
+    
     this.orderService.create(order).subscribe( res => {
       this.form.reset()
       this.added = "Заказ Совершён"
