@@ -322,6 +322,14 @@ table th {
   padding: 1rem;
   overflow: auto;
   background-color: rgba(192, 192, 192, 0.9);
+  text-align: right;
+  font-weight: bold;
+  color:gray;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  
+
 
   position: fixed;
   top: 0;
@@ -339,8 +347,9 @@ table th {
   max-width: 1200px;
   text-align: center;
   margin: auto;
-  position: relative;
+  position: absolute;
   margin-top: 1rem;
+  margin-left: 15rem
   ;
 }
 

@@ -54,4 +54,9 @@ export class MainLayoutComponent implements OnInit {
     this.render.addClass(event.target, 'selected');
   }
 
+//  click(event) {
+//    let modal_resume = document.getElementById('modal_resume')[0];
+//    modal_resume.render.remove("modal");   //remove the class
+//    modal_resume.render.addClass("selected");   //add the class
+//  }
 }
